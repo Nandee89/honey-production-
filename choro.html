@@ -1,0 +1,111 @@
+<!DOCTYPE HTML>
+<meta charset="utf-8">
+<html>
+
+<head>
+
+  <link rel="stylesheet" type="text/css"
+    href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:400italic,600italic,700italic,200,300,400,600,700,900">
+  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="http://d3js.org/queue.v1.min.js"></script>
+  <script src="http://d3js.org/topojson.v1.min.js"></script>
+  <style>
+    #content {
+      margin: 20px;
+      padding: 20px;
+      width: 805px;
+      border: 1px solid #ccc;
+      transform: translate(50px, 0px);
+      background-color: #E8E8E8;
+    }
+
+    li,
+    h1,
+    h2,
+    p {
+      margin: 0;
+      padding: 0;
+      font-family: 'Source Sans Pro', sans-serif;
+      font-size: 1em;
+      color: #333;
+      font-weight: 300;
+    }
+
+    #map {
+      margin: 10px 0px 0px 0px;
+      padding: 0px;
+    }
+
+    #canary {
+      border: 1px solid #ccc;
+      transform: translate(0px, 590px);
+      width: 240px;
+
+      height: 100px;
+    }
+
+
+    .tooltip {
+      position: absolute;
+      padding: 7px;
+      font-size: 0.9em;
+      pointer-events: none;
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+
+      -moz-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+      -webkit-box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+      box-shadow: 3px 3px 10px 0px rgba(0, 0, 0, 0.25);
+    }
+
+    #legend text {
+      font-size: 0.9em;
+      color: #333;
+      font-weight: 400;
+    }
+
+    h1,
+    h2 {
+      line-height: 1em;
+      font-size: 1.75em;
+      font-weight: 900;
+      color: #000;
+      font-family: sans-serif;
+    }
+
+    h2.year {
+      margin: 10px 0px 0px 0px;
+      font-size: 1.3em;
+      font-weight: 700;
+    }
+  </style>
+</head>
+
+<body>
+  <div id="content">
+    <h1>Donde se produce más Miel: 2013-2017</h1>
+
+    <p>España es uno de los países que exporta gran cantidad<br> de toneladas de miel en la unión Europea y el mundo.
+      <br>
+      En 2017 era número uno la unión con alrededor de 29.000 toneladas de miel producido. <br>
+      La miel proviene de todas las comunidades autónomas, excepto Ceuta y Melilla.</p>
+    <h2 class="year"></h2>
+    <div class="slider"></div>
+    <p></p>
+    <div id="map">
+      <div id="canary"></div>
+    </div>
+    <p><strong>Notas:</strong></p>
+    <ul>
+      <li>Los porcentajes son de la toneladas de miel producidas.</li>
+      <li>Fuente : <a
+          href="https://www.mapa.gob.es/es/estadistica/temas/estadisticas-agrarias/ganaderia/lana-miel-huevos-consumo-humano/">Ministerio
+          de Agricultura, Pesca y Alimentación</a></li>
+    </ul>
+  </div>
+
+  <script type="text/javascript" src="map.js"></script>
+</body>
+
+</html>
